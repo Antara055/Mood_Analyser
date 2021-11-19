@@ -13,11 +13,15 @@ public class MoodAnalyser {
         this.message = message;
     }
     public String analyseMood(){
-        if (this.message.contains("Sad")){
-            return "SAD";
+        try {
+            if (this.message.contains("Sad")) {
+                return "SAD";
+            } else
+                return "HAPPY";
         }
-        else
+        catch (Exception e) {
             return "HAPPY";
+        }
     }
     public static void main(String[] args) {
         System.out.println("Welcome to Mood Analyser problem");
