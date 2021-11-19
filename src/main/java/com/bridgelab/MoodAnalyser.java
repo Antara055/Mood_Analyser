@@ -7,8 +7,13 @@ package com.bridgelab;
  */
 
 public class MoodAnalyser {
-    public String analyseMood(String message){
-        if (message.contains("Sad")){
+    private String message;
+    MoodAnalyser(){}
+    public MoodAnalyser(String message){
+        this.message = message;
+    }
+    public String analyseMood(){
+        if (this.message.contains("Sad")){
             return "SAD";
         }
         else
